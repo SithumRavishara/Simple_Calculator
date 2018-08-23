@@ -272,7 +272,7 @@ public class Calculator extends javax.swing.JFrame {
                 SecondNumber =Double.parseDouble(txtSecondNumber.getText());
                 Result=FirstNumber-SecondNumber;
                 answer = Double.toString(Result);
-                txtResult.setText(FirstNumber+"+"+SecondNumber+"="+answer);
+                txtResult.setText(FirstNumber+"-"+SecondNumber+"="+answer);
                 break;
                 
                 case "/":
@@ -280,7 +280,7 @@ public class Calculator extends javax.swing.JFrame {
                 SecondNumber =Double.parseDouble(txtSecondNumber.getText());
                 Result=FirstNumber/SecondNumber;
                 answer = Double.toString(Result);
-                txtResult.setText(FirstNumber+"+"+SecondNumber+"="+answer);
+                txtResult.setText(FirstNumber+"/"+SecondNumber+"="+answer);
                 break;
                 
                 case "*":
@@ -288,7 +288,7 @@ public class Calculator extends javax.swing.JFrame {
                 SecondNumber =Double.parseDouble(txtSecondNumber.getText());
                 Result=FirstNumber*SecondNumber;
                 answer = Double.toString(Result);
-                txtResult.setText(FirstNumber+"+"+SecondNumber+"="+answer);
+                txtResult.setText(FirstNumber+"*"+SecondNumber+"="+answer);
                 break;
                 
                  } 
