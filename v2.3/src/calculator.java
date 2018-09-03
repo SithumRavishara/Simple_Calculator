@@ -151,7 +151,13 @@ public class calculator extends javax.swing.JFrame {
 
         btnCE.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnCE.setForeground(new java.awt.Color(255, 0, 0));
-        btnCE.setText("CE");
+        btnCE.setText("+/-");
+        btnCE.setToolTipText("");
+        btnCE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCEActionPerformed(evt);
+            }
+        });
 
         btnC.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnC.setForeground(new java.awt.Color(255, 0, 0));
@@ -477,6 +483,15 @@ public class calculator extends javax.swing.JFrame {
         display.setText(null);
        
     }//GEN-LAST:event_btnCActionPerformed
+
+    private void btnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCEActionPerformed
+        // TODO add your handling code here:
+        FirstNumber=-FirstNumber;
+          
+                
+        
+        
+    }//GEN-LAST:event_btnCEActionPerformed
 
     /**
      * @param args the command line arguments
