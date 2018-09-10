@@ -21,6 +21,7 @@ public class calculator extends javax.swing.JFrame {
     String Firstpart;
     String Secondpart;
     String answer;
+    double abs;
     
     public calculator() {
         initComponents();
@@ -486,8 +487,18 @@ public class calculator extends javax.swing.JFrame {
 
     private void btnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCEActionPerformed
         // TODO add your handling code here:
-        FirstNumber=-FirstNumber;
-          
+        String S1;
+        abs=Double.parseDouble(display.getText());
+        if(abs<0){
+        abs=-abs;
+              S1 = String.format("%.0f",abs);
+              display.setText(S1);
+        }else{
+         S1 = String.format("%.0f",abs);
+         display.setText(S1);
+        }
+        
+        
                 
         
         
