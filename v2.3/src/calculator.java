@@ -66,6 +66,11 @@ public class calculator extends javax.swing.JFrame {
         jPanel1.setToolTipText("SimpleCalculatorV2.0");
 
         display.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        display.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                displayActionPerformed(evt);
+            }
+        });
 
         btn1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btn1.setText("1");
@@ -487,22 +492,19 @@ public class calculator extends javax.swing.JFrame {
 
     private void btnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCEActionPerformed
         // TODO add your handling code here:
-        String S1;
-        abs=Double.parseDouble(display.getText());
-        if(abs<0){
-        abs=-abs;
-              S1 = String.format("%.0f",abs);
-              display.setText(S1);
-        }else{
-         S1 = String.format("%.0f",abs);
-         display.setText(S1);
-        }
-        
+        abs = Double.parseDouble(String.valueOf(display.getText()));
+        abs = abs*(-1);
+        display.setText(String.valueOf(abs));
+       
         
                 
         
         
     }//GEN-LAST:event_btnCEActionPerformed
+
+    private void displayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_displayActionPerformed
 
     /**
      * @param args the command line arguments
